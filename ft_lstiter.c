@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcoant-- <lcoant--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 15:41:21 by lcoant--          #+#    #+#             */
-/*   Updated: 2026/04/20 16:05:21 by lcoant--         ###   ########.fr       */
+/*   Created: 2026/04/20 15:45:20 by lcoant--          #+#    #+#             */
+/*   Updated: 2026/04/20 15:45:22 by lcoant--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
+	return ;
 }

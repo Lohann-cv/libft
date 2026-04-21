@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcoant-- <lcoant--@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/20 15:48:49 by lcoant--          #+#    #+#             */
+/*   Updated: 2026/04/20 15:48:54 by lcoant--         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void  ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-  if (c == '\0' || fd == -1)
-    return ;
-  write(fd, &c, 1);
-  return ;
+	if (c == '\0' || fd == -1)
+		return ;
+	write(fd, &c, 1);
+	return ;
 }
