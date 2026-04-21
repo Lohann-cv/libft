@@ -15,13 +15,15 @@
 static size_t	ft_intlen(int n)
 {
 	size_t	len;
+  long  nb;
 
+  nb = n;
 	len = 0;
-	if (n < 0)
+	if (nb <= 0)
 		len++;
-	while (n != 0)
+	while (nb != 0)
 	{
-		n /= 10;
+		nb /= 10;
 		len++;
 	}
 	return (len);
