@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcoant-- <lcoant--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 15:43:50 by lcoant--          #+#    #+#             */
-/*   Updated: 2026/04/20 15:44:54 by lcoant--         ###   ########.fr       */
+/*   Updated: 2026/04/23 21:09:23 by lcoant--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	if (!lst || !del)
 		return ;
 	element = *lst;
-	while (element)
+	while (*lst)
 	{
-		ft_lstdelone(element, del);
-		element = element->next;
+		element = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = element;
 	}
-	*lst = NULL;
 	return ;
 }

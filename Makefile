@@ -9,7 +9,7 @@ ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c \
 ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_substr.c \
 ft_tolower.c ft_toupper.c ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-ft_lstmap.c
+ft_lstmap.c ft_strtrim.c ft_itoa.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
@@ -21,11 +21,11 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re

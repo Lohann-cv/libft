@@ -6,7 +6,7 @@
 /*   By: lcoant-- <lcoant--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 15:42:49 by lcoant--          #+#    #+#             */
-/*   Updated: 2026/04/20 15:42:50 by lcoant--         ###   ########.fr       */
+/*   Updated: 2026/04/22 08:52:34 by lcoant--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 static size_t	ft_intlen(int n)
 {
 	size_t	len;
-  long  nb;
+	long	nb;
 
-  nb = n;
+	nb = n;
 	len = 0;
 	if (nb <= 0)
 		len++;
